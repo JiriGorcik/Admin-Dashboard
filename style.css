@@ -8,5 +8,33 @@ body {
     font-family: Roboto;
 }
 
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 4fr 1.5fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: 
+    "nav header header"
+    "nav article sidebar";
+}
 
+.header {
+    grid-area: header;
+    background-color: green;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: blue;
+}
+
+.article {
+    grid-area: article;
+    background-color: pink;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: antiquewhite;
+}
 
