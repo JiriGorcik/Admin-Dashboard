@@ -58,15 +58,16 @@ body {
     align-items: center;
     justify-content: flex-end;
     padding-right: 50px;
-    gap: 40px;
+    gap: 30px;
 }
 
 .bell-icon {
     cursor: pointer;
     font-size: 26px;
+    margin-right: 10px;
 }
 
-.user img {
+.small-profile-picture {
     width: 60px;
     height: 50px;
     border-radius: 50%;
@@ -163,8 +164,131 @@ body {
 
 /* ARTICLE */
 .article {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "projects announcement"
+    "projects trending";
     grid-area: article;
     background-color: pink;
+}
+
+
+
+.projects {
+    display: grid;
+    grid-template-rows: 70px 1fr;
+    grid-area: projects;
+}
+
+.projects h2 {
+    margin: 20px;
+}
+
+.boxes {
+    display: grid;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: repeat(3, minmax(100px, 1fr));
+}
+
+.boxes > div {
+    border-radius: 10px;
+    border-left: 9px solid rgb(240, 196, 84);
+    background-color: white;
+}
+
+.boxes div h3 {
+    padding-left: 20px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.boxes div p {
+    padding-left: 20px;
+}
+
+.boxes-icons {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.box-icon {
+    font-size: 18px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.announcement {
+    grid-area: announcement;
+}
+
+.announcement h2 {
+    margin: 20px;
+}
+
+.news {
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 40px;
+    padding: 30px;
+    border-radius: 10px;
+    min-width: 250px;
+}
+
+.news > div {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.news h3 {
+    font-size: 18px;
+}
+
+.news p {
+    font-size: 15px;
+}
+
+.trending {
+    grid-area: trending;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trending > div {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 200px;
+    
+}
+
+.trending h2 {
+    margin: 20px;
+    text-align: center;
+}
+
+.trend {
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 250px;
+}
+
+.trend > div {
+    display: flex;
+    gap: 15px;
 }
 
 
